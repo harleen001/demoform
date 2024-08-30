@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+ 
+header {
+    margin-bottom: 20px;
+}
+form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+fieldset {
+    border: 2px solid #dee2e6;
+    border-radius: 5px;
+}
+legend {
+    font-weight: bold;
+}
+.text-danger {
+    color: #dc3545;
+}
+
+    </style>
+</head>
+<body>
+    <header class="bg-danger text-white text-center py-3">
+        <h1>Wellcode Solution SDE 1 </h1>
+    </header>
+    <div class="container mt-4">
+        <h2>Application Form</h2>
+        <form id="applicationForm">
+            <!-- Personal Details -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" class="form-control" name="middleName" id="middleName">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email ID <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" name="phone" id="phone" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" name="dob" id="dob">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" name="gender" id="gender">
+                        <option value="">Select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="currentJob">Current Job Title</label>
+                    <input type="text" class="form-control" name="currentJob" id="currentJob">
+                </div>
+            </div>
+            
+            <!-- Educational Background -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="degree">Highest Degree Obtained</label>
+                    <input type="text" class="form-control" name="degree" id="degree">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="school">Completed from Which School/Institution</label>
+                    <input type="text" class="form-control" name="school" id="school">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="gradYear">Year of Graduation</label>
+                    <input type="number" class="form-control" name="gradYear" id="gradYear">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="languages">Languages Known</label>
+                    <input type="text" class="form-control" name="languages" id="languages">
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="experience">Working Experience (in years)</label>
+                <input type="number" class="form-control" name="experience" id="experience">
+            </div>
+           
+            <!-- Address Details -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto">Current Address</legend>
+                <div class="form-group">
+                    <label for="address1">Address Line 1</label>
+                    <input type="text" class="form-control" name="address1" id="address1">
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address Line 2</label>
+                    <input type="text" class="form-control" name="address2" id="address2">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="city">City/Town</label>
+                        <input type="text" class="form-control" name="city" id="city">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" name="state" id="state">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="area">Area</label>
+                        <input type="text" class="form-control" name="area" id="area">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" class="form-control" name="pincode" id="pincode">
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="skills">Skills</label>
+                <textarea class="form-control" name="skills" id="skills" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="availability">Interview Availability (Date/Time)</label>
+                <input type="datetime-local" class="form-control" name="availability" id="availability">
+            </div>
+            <div class="form-group">
+                <label for="link">Link (e.g., Portfolio, LinkedIn)</label>
+                <input type="url" class="form-control" name="link" id="link">
+            </div>
+            <div class="form-group">
+                <label for="emergencyContact">Emergency Contact Number</label>
+                <input type="tel" class="form-control" name="emergencyContact" id="emergencyContact">
+            </div>
+            
+            <!-- File Uploads -->
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" class="form-control-file" name="resume" id="resume" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="form-group">
+                <label for="govtId">Upload Government ID (Aadhar card/Driving License)</label>
+                <input type="file" class="form-control-file" name="govtId" id="govtId" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+            <div class="form-group">
+                <label for="photo">Passport Size Photograph</label>
+                <input type="file" class="form-control-file" name="photo" id="photo" accept=".jpg,.jpeg,.png">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>document.getElementById('applicationForm').addEventListener('submit', function(event) {
+        const form = event.target;
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        let valid = true;
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                valid = false;
+                field.classList.add('is-invalid');
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+    
+        if (!valid) {
+            event.preventDefault();
+            alert('Please fill out all required fields.');
+        }
+    });
+    </script>
+</body>
+</html>
